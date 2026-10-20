@@ -25,7 +25,7 @@ h1{font-size:clamp(25px,2.55vw,37px);letter-spacing:-.045em;line-height:1.2;marg
 .count-line{display:flex;align-items:center;gap:8px;min-width:0}
 .list-tools p{margin:0;font-size:11px;color:#66736a;font-variant-numeric:tabular-nums;white-space:nowrap}
 .list-tool-actions{display:flex;align-items:center;gap:9px}
-.filter-toggle{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:32px;padding:0 10px;border-radius:6px;border:1px solid #cbd3cc;background:#fff;color:#325d4e;font-size:12px;font-weight:700;white-space:nowrap}
+.filter-toggle{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:32px;padding:0 10px;border-radius:6px;border:1px solid #cbd3cc;background:#fff;color:#325d4e;font-size:12px;font-weight:700;white-space:nowrap}
 .filter-toggle[aria-expanded="true"]{background:#e2eee6;border-color:#8baa95}
 .filter-content{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
 .search-box{height:32px;width:min(220px,42vw);display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #cbd3cc;border-radius:6px;padding:0 8px;color:#75847a}
@@ -38,8 +38,8 @@ h1{font-size:clamp(25px,2.55vw,37px);letter-spacing:-.045em;line-height:1.2;marg
 .chip.is-active{border-color:#256054;background:#e1ece5;color:#205448}
 .text-action{border:0;background:none;color:#256054;text-decoration:underline;text-underline-offset:3px;min-height:44px;padding:5px 3px;font-size:12px;font-weight:700}
 .text-action:disabled{opacity:.5;cursor:not-allowed}
-.view-switch{display:flex;border:1px solid #cbd3cc;border-radius:6px;background:#fff;padding:2px}
-.view-switch button{border:0;border-radius:4px;background:transparent;color:#607168;min-height:38px;min-width:48px;padding:0 10px;font-size:12px;font-weight:700}
+.view-switch{display:flex;align-items:stretch;height:32px;border:1px solid #cbd3cc;border-radius:6px;background:#fff;padding:2px}
+.view-switch button{border:0;border-radius:4px;background:transparent;color:#607168;min-height:0;min-width:48px;padding:0 10px;font-size:12px;font-weight:700}
 .view-switch button.is-active{background:#e1ece5;color:#24584a}
 .sheet{background:#fff;border:1px solid #cbd3cc;border-radius:7px;overflow:hidden}
 .table-head,.record-main{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(120px,.8fr) 22px;gap:13px;align-items:start}

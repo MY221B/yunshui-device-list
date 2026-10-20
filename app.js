@@ -90,7 +90,8 @@
           ${image.warning ? `<p class="image-warning">${escapeHtml(image.warning)}</p>` : ''}
         </figure>`;
       }).join('');
-      return figures ? `<section class="image-section"><h4>${title}</h4><div class="image-stack">${figures}</div></section>` : '';
+      const heading = title === '设备图片与尺寸资料' ? '' : `<h4>${escapeHtml(title)}</h4>`;
+      return figures ? `<section class="image-section">${heading}<div class="image-stack">${figures}</div></section>` : '';
     }).join('');
   }
 

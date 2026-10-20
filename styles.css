@@ -111,7 +111,7 @@ dialog::backdrop{background:#16231ab8}
 .sheet[data-view="card"] .table-head{display:none}
 .sheet[data-view="card"] #records{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
 .sheet[data-view="card"] .record{display:flex;flex-direction:column;border:1px solid #cbd3cc;border-radius:7px;background:#fff;overflow:hidden}
-.sheet[data-view="card"] .record-main{order:1;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ordinal location" "identity identity" "device-size cabinet-size" "notes notes";gap:11px 16px;padding:17px 17px 8px;min-height:0;align-items:start}
+.sheet[data-view="card"] .record-main{order:1;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"ordinal location" "identity identity" "device-size cabinet-size" "notes notes";gap:11px 16px;padding:17px 17px 8px;min-height:0;align-items:start}
 .sheet[data-view="card"] .record-foot{order:2;display:flex;background:#fff;padding:0 14px 12px}
 .sheet[data-view="card"] .record-detail{order:3;background:#f9faf7}
 .sheet[data-view="card"] .device-cell{display:contents}
@@ -123,7 +123,7 @@ dialog::backdrop{background:#16231ab8}
 .sheet[data-view="card"] .device-size{grid-area:device-size}
 .sheet[data-view="card"] .cabinet-size{grid-area:cabinet-size;display:block}
 .sheet[data-view="card"] .notes-preview{grid-area:notes;display:flex;flex-wrap:wrap;gap:4px 14px}
-.sheet[data-view="card"] .notes-preview span{box-sizing:border-box;flex:1 1 calc(50% - 7px);max-width:calc(50% - 7px);min-width:0}
+.sheet[data-view="card"] .notes-preview span{flex:0 0 auto;max-width:100%}
 .sheet[data-view="card"] .detail-cue{display:none}
 .sheet[data-view="card"] .folded-facts{display:none}
 .sheet[data-view="card"] .size-cell::before{display:block;color:#76837a;font-size:10px;font-weight:600;margin-bottom:2px}

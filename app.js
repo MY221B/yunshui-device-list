@@ -8,6 +8,7 @@
   const searchNode = $('#search');
   const toastNode = $('#toast');
   const copyDialog = $('#copy-dialog');
+  const imageDialog = $('#image-dialog');
   let devices = [];
   let updatedAt = '2026-10-20';
   let publicUrl = '';
@@ -80,13 +81,13 @@
       const figures = list.map((image) => {
         const src = safeImagePath(image.src);
         if (!src) return '';
+        const label = image.alt || image.caption || '设备资料图片';
         return `<figure class="image-figure">
           <figcaption>${escapeHtml(image.caption || image.alt || '')}</figcaption>
-          <div class="image-frame" tabindex="0" aria-label="${escapeHtml(image.alt || image.caption || '设备资料图片')}，可横向滚动查看完整图片">
+          <button type="button" class="image-frame" data-lightbox src="${escapeHtml(src)}" data-caption="${escapeHtml(image.caption || image.alt || '')}" aria-label="查看大图：${escapeHtml(label)}">
             <img src="${escapeHtml(src)}" alt="${escapeHtml(image.alt || '')}" loading="lazy" decoding="async">
-          </div>
+          </button>
           ${image.warning ? `<p class="image-warning">${escapeHtml(image.warning)}</p>` : ''}
-          <a class="original-link" href="${escapeHtml(src)}" target="_blank" rel="noopener noreferrer">查看原图 ↗</a>
         </figure>`;
       }).join('');
       return figures ? `<section class="image-section"><h4>${title}</h4><div class="image-stack">${figures}</div></section>` : '';
@@ -120,25 +121,39 @@
     return extra + quantity + rendered;
   }
 
+  function chevron() {
+    return '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg>';
+  }
+
   function renderRecord(device) {
     const id = `detail-${device.ordinal}`;
     const open = expandedIds.has(String(device.id));
     const productUrl = safeUrl(device.productUrl);
     const details = renderDetailGroups(device);
+    const noteItems = (Array.isArray(device.keyNotes) ? device.keyNotes : []).map((note) => `<li>${escapeHtml(note)}</li>`).join('');
+    const deviceId = escapeHtml(device.id);
     return `<article class="record" id="k-${device.ordinal}">
-      <button class="record-main" type="button" data-toggle="${escapeHtml(device.id)}" aria-expanded="${open}" aria-controls="${id}" aria-label="${escapeHtml(device.ordinal + '. ' + device.name)}，${open ? '收起' : '展开'}图片与安装详情">
+      <button class="record-main" type="button" data-toggle="${deviceId}" aria-expanded="${open}" aria-controls="${id}" aria-label="${escapeHtml(device.ordinal + '. ' + device.name)}，${open ? '收起' : '展开'}图片与详情">
         <span class="device-cell"><span class="ordinal">${String(device.ordinal).padStart(2, '0')}</span><span class="device-identity"><span class="device-name">${escapeHtml(device.name)}</span><span class="model-line">${escapeHtml(modelText(device))}</span></span></span>
         <span class="location">${escapeHtml(locationText(device))}</span>
         <span class="size-cell device-size">${escapeWithBreaks(display(device.deviceSize))}</span>
         <span class="size-cell cabinet-size">${escapeWithBreaks(display(device.cabinetSize))}</span>
         <span class="notes-preview">${renderNotes(device.keyNotes)}</span>
-        <span class="detail-cue"><span class="desktop-cue">详情</span><span class="mobile-cue">图片与安装详情</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></span>
+        <span class="detail-cue" aria-hidden="true">${chevron()}</span>
       </button>
       <div class="record-detail" id="${id}" ${open ? '' : 'hidden'}>
-        <div class="detail-actions"><button type="button" class="detail-copy" data-copy-one="${escapeHtml(device.id)}">复制这台要点</button><button type="button" class="fit-button" data-fit-images aria-pressed="false">适应屏幕</button></div>
+        <dl class="folded-facts">
+          <div><dt>安装位置</dt><dd>${escapeHtml(locationText(device))}</dd></div>
+          <div><dt>柜体预留</dt><dd>${escapeWithBreaks(display(device.cabinetSize))}</dd></div>
+          ${noteItems ? `<div><dt>关键事项</dt><dd><ul>${noteItems}</ul></dd></div>` : ''}
+        </dl>
         ${renderImages(device)}
         ${details ? `<div class="detail-grid">${details}</div>` : ''}
         ${productUrl ? `<a class="product-link" href="${escapeHtml(productUrl)}" target="_blank" rel="noopener noreferrer">打开购买链接 ↗</a>` : ''}
+      </div>
+      <div class="record-foot">
+        <button type="button" class="detail-copy" data-copy-one="${deviceId}" ${open ? '' : 'hidden'}>复制这台要点</button>
+        <button type="button" class="detail-toggle" data-toggle="${deviceId}" aria-expanded="${open}" aria-controls="${id}">图片与详情${chevron()}</button>
       </div>
     </article>`;
   }
@@ -168,12 +183,66 @@
     try {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
       await navigator.clipboard.writeText(content);
-      toast(`已复制 ${list.length} 项要点`);
+      toast(`已复制 ${list.length} 项要点，可粘贴至微信`);
     } catch {
       $('#manual-copy').value = content;
       copyDialog.showModal();
       $('#manual-copy').focus();
       $('#manual-copy').select();
+    }
+  }
+
+  function setExpanded(article, id, open) {
+    if (open) expandedIds.add(id);
+    else expandedIds.delete(id);
+    const device = devices.find((item) => String(item.id) === id);
+    article.querySelectorAll('[data-toggle]').forEach((node) => {
+      node.setAttribute('aria-expanded', String(open));
+      if (node.classList.contains('record-main')) {
+        node.setAttribute('aria-label', `${device?.ordinal || ''}. ${device?.name || '设备'}，${open ? '收起' : '展开'}图片与详情`);
+      }
+    });
+    const detail = article.querySelector('.record-detail');
+    if (detail) detail.hidden = !open;
+    const copy = article.querySelector('.detail-copy');
+    if (copy) copy.hidden = !open;
+  }
+
+  function openLightbox(button) {
+    const img = button.querySelector('img');
+    if (!img) return;
+    const caption = button.dataset.caption || img.alt || '大图';
+    $('#image-dialog-caption').textContent = caption;
+    const preview = $('#image-dialog-img');
+    preview.src = button.getAttribute('src') || img.currentSrc || img.src;
+    preview.alt = img.alt || caption;
+    imageDialog.showModal();
+  }
+
+  async function downloadWorkbook(event) {
+    event.preventDefault();
+    const href = event.currentTarget.href;
+    if (/MicroMessenger/i.test(navigator.userAgent)) {
+      window.location.assign(href);
+      return;
+    }
+    toast('正在准备表格…');
+    try {
+      const response = await fetch(href);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const blob = new Blob([await response.arrayBuffer()], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = '云水观园设备尺寸清单.xlsx';
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+      toast('表格已下载');
+    } catch (error) {
+      console.error('表格导出失败：', error);
+      toast('表格导出失败，请稍后重试');
     }
   }
 
@@ -212,6 +281,11 @@
     render();
   });
   searchNode.addEventListener('input', render);
+  $('#filter-toggle').addEventListener('click', () => {
+    const open = $('#filter-toggle').getAttribute('aria-expanded') !== 'true';
+    $('#filter-toggle').setAttribute('aria-expanded', String(open));
+    $('#filter-panel').hidden = !open;
+  });
   $('.view-switch').addEventListener('click', (event) => {
     const button = event.target.closest('[data-view]');
     if (!button) return;
@@ -223,32 +297,25 @@
     });
   });
   recordsNode.addEventListener('click', (event) => {
+    const lightbox = event.target.closest('[data-lightbox]');
+    if (lightbox) { openLightbox(lightbox); return; }
     const toggle = event.target.closest('[data-toggle]');
     if (toggle) {
       const id = toggle.dataset.toggle;
-      if (expandedIds.has(id)) expandedIds.delete(id); else expandedIds.add(id);
-      const open = expandedIds.has(id);
-      const device = devices.find((item) => String(item.id) === id);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', `${device?.ordinal || ''}. ${device?.name || '设备'}，${open ? '收起' : '展开'}图片与安装详情`);
-      document.getElementById(toggle.getAttribute('aria-controls')).hidden = !open;
+      const article = toggle.closest('.record');
+      setExpanded(article, id, !expandedIds.has(id));
       return;
     }
     const copy = event.target.closest('[data-copy-one]');
     if (copy) { const device = devices.find((item) => String(item.id) === copy.dataset.copyOne); if (device) copyList([device]); return; }
-    const fit = event.target.closest('[data-fit-images]');
-    if (fit) {
-      const detail = fit.closest('.record-detail');
-      const fitted = detail.classList.toggle('images-fit');
-      fit.setAttribute('aria-pressed', String(fitted));
-      fit.textContent = fitted ? '原始大小' : '适应屏幕';
-      return;
-    }
     if (event.target.id === 'retry-load') loadData();
   });
   $('#copy-all').addEventListener('click', () => copyList(devices));
   $('#copy-filtered').addEventListener('click', () => copyList(currentDevices()));
+  $('#export-sheet').addEventListener('click', downloadWorkbook);
   $('#close-copy').addEventListener('click', () => copyDialog.close());
   $('#select-copy').addEventListener('click', () => { $('#manual-copy').focus(); $('#manual-copy').select(); });
+  $('#close-image').addEventListener('click', () => imageDialog.close());
+  imageDialog.addEventListener('click', (event) => { if (event.target === imageDialog) imageDialog.close(); });
   loadData();
 })();

@@ -20,7 +20,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2h2"/></svg>
             复制要点
           </button>
-          <a class="action secondary" href="./exports/云水观园设备尺寸清单.xlsx" download="云水观园设备尺寸清单.xlsx">
+          <a class="action secondary" id="export-sheet" href="./exports/devices.xlsx" download="云水观园设备尺寸清单.xlsx">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
             导出表格
           </a>
@@ -30,42 +30,47 @@
 
     <main>
       <section class="list-tools" aria-label="清单浏览工具">
-        <p id="result-count" role="status" aria-live="polite">正在读取清单…</p>
+        <div class="count-line">
+          <p id="result-count" role="status" aria-live="polite">正在读取清单…</p>
+          <label class="search-box search-inline" for="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+            <span class="visually-hidden">搜索设备、型号或位置</span>
+            <input id="search" type="search" placeholder="搜索" aria-label="搜索设备、型号或位置" autocomplete="off">
+          </label>
+        </div>
         <div class="list-tool-actions">
-          <details class="filter-panel" id="filter-panel">
-            <summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10m-7 6h4"/></svg>筛选</summary>
-            <div class="filter-content">
-              <label class="search-box" for="search">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
-                <span class="visually-hidden">搜索设备、型号或位置</span>
-                <input id="search" type="search" placeholder="搜索设备、型号或位置" aria-label="搜索设备、型号或位置" autocomplete="off">
-              </label>
-              <div class="chips" id="room-filters" role="group" aria-label="按位置筛选">
-                <button type="button" class="chip is-active" data-room="全部" aria-label="全部" aria-pressed="true">全部</button>
-                <button type="button" class="chip" data-room="厨房" aria-label="厨房" aria-pressed="false">厨房</button>
-                <button type="button" class="chip" data-room="餐边柜" aria-label="餐边柜" aria-pressed="false">餐边柜</button>
-                <button type="button" class="chip" data-room="家政间" aria-label="家政间" aria-pressed="false">家政间</button>
-                <button type="button" class="chip" data-room="次卫" aria-label="次卫" aria-pressed="false">次卫</button>
-                <button type="button" class="chip" data-room="全屋用水" aria-label="全屋用水" aria-pressed="false">全屋用水</button>
-              </div>
-              <button type="button" id="copy-filtered" class="text-action" hidden>复制当前<span class="current-count"></span>项</button>
-            </div>
-          </details>
+          <button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="true" aria-controls="filter-panel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10m-7 6h4"/></svg>筛选
+          </button>
           <div class="view-switch" role="group" aria-label="视图切换">
             <button type="button" data-view="list" aria-pressed="true" class="is-active">列表</button>
             <button type="button" data-view="card" aria-pressed="false">卡片</button>
           </div>
         </div>
+        <div class="filter-content" id="filter-panel">
+          <div class="chips" id="room-filters" role="group" aria-label="按位置筛选">
+            <button type="button" class="chip is-active" data-room="全部" aria-label="全部" aria-pressed="true">全部</button>
+            <button type="button" class="chip" data-room="厨房" aria-label="厨房" aria-pressed="false">厨房</button>
+            <button type="button" class="chip" data-room="餐边柜" aria-label="餐边柜" aria-pressed="false">餐边柜</button>
+            <button type="button" class="chip" data-room="家政间" aria-label="家政间" aria-pressed="false">家政间</button>
+            <button type="button" class="chip" data-room="次卫" aria-label="次卫" aria-pressed="false">次卫</button>
+          </div>
+          <button type="button" id="copy-filtered" class="text-action" hidden>复制当前<span class="current-count"></span>项</button>
+        </div>
       </section>
 
       <section class="sheet" id="sheet" data-view="list" aria-label="设备安装记录">
-        <div class="table-head" aria-hidden="true"><span>设备</span><span>安装位置</span><span>机身尺寸</span><span>柜体预留</span><span>关键事项</span><span>详情</span></div>
+        <div class="table-head" aria-hidden="true"><span>名称</span><span class="fold-col">安装位置</span><span>机身尺寸</span><span class="fold-col">柜体预留</span><span class="fold-col">关键事项</span><span></span></div>
         <div id="records"><p class="loading">正在读取设备资料…</p></div>
       </section>
     </main>
   </div>
 
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-dialog-caption">
+    <div class="dialog-bar"><strong id="image-dialog-caption">大图</strong><button class="icon-button" type="button" id="close-image" aria-label="关闭大图">×</button></div>
+    <img id="image-dialog-img" alt="">
+  </dialog>
   <dialog id="copy-dialog" class="copy-dialog" aria-labelledby="copy-dialog-title">
     <div class="dialog-bar"><strong id="copy-dialog-title">手动复制要点</strong><button class="icon-button" type="button" id="close-copy" aria-label="关闭手动复制">×</button></div>
     <p>浏览器未能自动复制。请选中下方文字并手动复制。</p>

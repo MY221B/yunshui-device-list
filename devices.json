@@ -1,0 +1,963 @@
+{
+  "updatedAt": "2026-10-20",
+  "sourceUrl": "https://admirable-myhome.netlify.app/",
+  "dimensionOrder": "宽 × 深 × 高",
+  "devices": [
+    {
+      "id": "dishwasher",
+      "name": "洗碗机",
+      "brand": "美的",
+      "model": "小西梅 P80 · 22套顶配洗涤版",
+      "room": "厨房",
+      "location": "厨下嵌入",
+      "quantity": 1,
+      "deviceSize": "598 × 585 × 775–805 mm",
+      "cabinetSize": "宽 600–605 / 深 ≥585（官方最小，推荐 ≥600）/ 高 780–810 mm",
+      "sizeNote": "",
+      "keyNotes": [
+        "不装外挂木门，原厂玻璃面板外露",
+        "推荐净深≥600；最小585时管线走侧板",
+        "下方踢脚线45°斜切并内退≥15mm"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备与柜体",
+          "items": [
+            {
+              "label": "背板",
+              "value": "推荐净深≥600mm时背部保留≥15mm空隙；按最小585mm施工则贴背、管线走侧板。"
+            }
+          ]
+        },
+        {
+          "title": "门板与踢脚线",
+          "items": [
+            {
+              "label": "门板",
+              "value": "原厂面板与左右柜门平齐。"
+            }
+          ]
+        },
+        {
+          "title": "接口与检修",
+          "items": [
+            {
+              "label": "电源",
+              "value": "10A接地防溅插座设在邻柜，离地45–60cm"
+            },
+            {
+              "label": "进水",
+              "value": "4分冷水角阀设在侧柜，离地30–50cm"
+            },
+            {
+              "label": "排水",
+              "value": "最高点50–80cm，管路走侧边"
+            },
+            {
+              "label": "禁止",
+              "value": "机器正后方布管/开孔；腔体内加横梁或隔板"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/dishwasher-dim.webp",
+          "alt": "洗碗机官方尺寸图",
+          "caption": "机身及官方开孔尺寸",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/dishwasher-install.webp",
+          "alt": "洗碗机安装图示",
+          "caption": "安装、管线与踢脚线参考",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.j0mqg2RBXCboTTf?tk=ccpcTJjjx8Z",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#k-1"
+    },
+    {
+      "id": "range-hood",
+      "name": "吸油烟机",
+      "brand": "方太",
+      "model": "V10S 顶侧一体平嵌",
+      "room": "厨房",
+      "location": "吊柜平嵌",
+      "quantity": 1,
+      "deviceSize": "900 × 377 × 667 mm",
+      "cabinetSize": "吊柜净长 ≥910 / 净深：带装饰罩 ≥330、不带 ≥325 mm（均不含门板）",
+      "sizeNote": "",
+      "keyNotes": [
+        "净深按装饰罩配置取值，锁定机型后下料",
+        "柜体净长≥910，左右各留5mm起检修缝",
+        "墙孔、顶柜孔为不同孔位，分别标注"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备与柜体",
+          "items": [
+            {
+              "label": "前缘",
+              "value": "与烟机面板齐平，不加前挡条"
+            }
+          ]
+        },
+        {
+          "title": "孔位与烟管",
+          "items": [
+            {
+              "label": "墙烟道孔",
+              "value": "Φ200mm（止回阀Φ190mm；最终按阀规格确认）"
+            },
+            {
+              "label": "顶柜/吊顶穿管孔",
+              "value": "Φ230mm；与外墙孔分开施工、分开标注"
+            },
+            {
+              "label": "排烟管",
+              "value": "加厚铝箔烟管，尽量短、少转弯"
+            }
+          ]
+        },
+        {
+          "title": "承重与电源",
+          "items": [
+            {
+              "label": "安装基层",
+              "value": "实心砖/混凝土墙；轻质墙加专用加固挂板"
+            },
+            {
+              "label": "插座",
+              "value": "10A接地插座设在烟机侧吊柜，勿置正后方"
+            },
+            {
+              "label": "安装高度",
+              "value": "集烟罩前部顶面距灶台720–780mm"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/fangtai-1.webp",
+          "alt": "抽油烟机安装图示1",
+          "caption": "安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/fangtai-2.webp",
+          "alt": "抽油烟机安装图示2",
+          "caption": "安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/fangtai-3.webp",
+          "alt": "抽油烟机安装图示3",
+          "caption": "机身与顶柜/吊顶孔位参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/fangtai-4.webp",
+          "alt": "抽油烟机安装图示4",
+          "caption": "墙烟道与止回阀孔位参考",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.jd0VpFvsbUM03qO?tk=ckdpTu2wqXd",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#k-2"
+    },
+    {
+      "id": "gas-water-heater",
+      "name": "燃气热水器",
+      "brand": "卡萨帝",
+      "model": "JSLQ28-16CWV7UltraU1",
+      "room": "厨房",
+      "location": "半封闭阳台 / 厨房柜内",
+      "quantity": 1,
+      "deviceSize": "370 × 190 × 600 mm",
+      "cabinetSize": "宽度按机身宽+100mm；深度 ≥机身厚+70mm（含20mm挂架背板）",
+      "sizeNote": "机身尺寸不含挂架；柜深的+70mm余量已包含20mm挂架背板。",
+      "keyNotes": [
+        "柜体通风面积≥40%，不得密闭",
+        "水路从机器底部接入；底部优先留≥130mm",
+        "烟管走吊顶，预留检修口"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备与柜体",
+          "items": [
+            {
+              "label": "上方/两侧",
+              "value": "顶部≥30mm；左右各≥50mm"
+            }
+          ]
+        },
+        {
+          "title": "接口与检修",
+          "items": [
+            {
+              "label": "电源",
+              "value": "220V 10A三孔插座，避开烟管高温区及机器正上方"
+            },
+            {
+              "label": "燃气",
+              "value": "不得埋墙；穿墙用φ40/φ50 PVC套管"
+            },
+            {
+              "label": "烟管",
+              "value": "不锈钢烟管走吊顶，距吊顶顶面≥50mm；吊顶留检修口"
+            },
+            {
+              "label": "水路",
+              "value": "冷热水及独立回水从机底隐藏接入；预埋独立回水管"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/heater-casarte-2.webp",
+          "alt": "热水器安装图示2",
+          "caption": "设备参数/安装及管路参考",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/heater-casarte-1.webp",
+          "alt": "热水器安装图示1",
+          "caption": "设备参数/安装及管路参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/heater-casarte-3.webp",
+          "alt": "热水器安装图示3",
+          "caption": "设备参数/安装及管路参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/heater-casarte-4.webp",
+          "alt": "热水器安装图示4",
+          "caption": "设备参数/安装及管路参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/heater-casarte-5.webp",
+          "alt": "热水器安装图示5",
+          "caption": "设备参数/安装及管路参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/heater-casarte-6.webp",
+          "alt": "热水器安装图示6",
+          "caption": "设备参数/安装及管路参考",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.jYhBQDFNSBs4FzL?tk=rBAzTsCKgUF",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-4"
+    },
+    {
+      "id": "gas-cooktop",
+      "name": "燃气灶",
+      "brand": "方太",
+      "model": "03-TEK20-V10",
+      "room": "厨房",
+      "location": "台面嵌入",
+      "quantity": 1,
+      "deviceSize": "780 × 450 × 150 mm",
+      "cabinetSize": "台面开孔 630 × 330 mm（R20）；可调 630–680 × 330–370 mm（R≤20）；台下净高 ≥80mm",
+      "sizeNote": "外形尺寸含锅架。",
+      "keyNotes": [
+        "新开孔按630×330mm、R20标注",
+        "台下留净高≥80mm，燃气管须可检修",
+        "灶具下柜保持通风并远离易燃物"
+      ],
+      "detailGroups": [
+        {
+          "title": "位置与接口",
+          "items": [
+            {
+              "label": "安装间距",
+              "value": "背部离墙≥150mm；侧边离墙≥200mm；距水槽≥200mm"
+            },
+            {
+              "label": "燃气角阀",
+              "value": "设于灶具下方柜内；距地建议350–400mm"
+            },
+            {
+              "label": "检修",
+              "value": "燃气管勿封死预埋，留更换空间。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/gas-stove-official.webp",
+          "alt": "燃气灶官方开孔尺寸图",
+          "caption": "新开孔尺寸及可调范围",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/fangtai-5.webp",
+          "alt": "燃气灶安装图示",
+          "caption": "安装参考",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.jd0VpFvsbUM03qO?tk=ckdpTu2wqXd",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#k-3"
+    },
+    {
+      "id": "under-sink-water-heater",
+      "name": "小厨宝",
+      "brand": "飞利浦",
+      "model": "AWH1066 即热式",
+      "room": "厨房",
+      "location": "厨房水槽柜内壁挂",
+      "quantity": 1,
+      "deviceSize": "230 × 55 × 160 mm",
+      "cabinetSize": "左右各 ≥30mm；背部 ≥25mm",
+      "sizeNote": "",
+      "keyNotes": [
+        "固定在实心墙或加固实木板",
+        "5500W独立回路，优先硬线直连漏保",
+        "进出水4分口，柜内注意防潮"
+      ],
+      "detailGroups": [
+        {
+          "title": "电源与水路",
+          "items": [
+            {
+              "label": "电源",
+              "value": "国标4平方铜线；独立C32漏电保护（30mA）。"
+            },
+            {
+              "label": "接线",
+              "value": "若用插座，页面要求≥25A三孔防溅；220V下标称电流约25A。插座位置高于机器；严禁排插转接、细线代用。"
+            },
+            {
+              "label": "接口",
+              "value": "4分螺纹下进下出；取大白瓶过滤后冷水"
+            },
+            {
+              "label": "安装",
+              "value": "先通水试压再通电；不得无水干烧；远离直接溅水处"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/chubao-install.webp",
+          "alt": "小厨宝安装要求图",
+          "caption": "电路与水路安装要求",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://v.douyin.com/4lT7OoCr2-Q/",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-5"
+    },
+    {
+      "id": "water-dispenser",
+      "name": "管线机",
+      "brand": "凯度",
+      "model": "G1Air / GXWH12-G1Air",
+      "room": "餐边柜",
+      "location": "餐边柜壁挂",
+      "quantity": 1,
+      "deviceSize": "320 × 150 × 430 mm",
+      "cabinetSize": "机顶净空 ≥50mm；壁挂孔位按安装图预留",
+      "sizeNote": "",
+      "keyNotes": [
+        "壁挂孔位需在柜体/墙面施工前预留",
+        "使用16A独立插座，勿用10A转接头",
+        "净水管及52mm厚插头通道提前留位"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备与安装",
+          "items": [
+            {
+              "label": "安装基层",
+              "value": "岩板/瓷板需提前预留壁挂孔位"
+            }
+          ]
+        },
+        {
+          "title": "接口与电源",
+          "items": [
+            {
+              "label": "电源",
+              "value": "额定功率3250W；电源线长1.4m。"
+            },
+            {
+              "label": "净水管",
+              "value": "二选一接厨下净水器或桶装水。净水器标配3分PE管2m，建议5m内、最长10m；桶装水2分PE管1m+硅胶管0.5m，总长不超1.5m。水管水电阶段预埋。"
+            },
+            {
+              "label": "穿管与检修",
+              "value": "预留63管（穿线管）供插头穿过。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/guanxianji-1.webp",
+          "alt": "管线机官方图1",
+          "caption": "型号与设备尺寸参考",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/guanxianji-2.webp",
+          "alt": "管线机官方图2",
+          "caption": "安装尺寸及接口参考",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/guanxianji-notes.webp",
+          "alt": "管线机安装注意事项",
+          "caption": "安装与接口注意事项",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.8BLNy7IEPcMQjY2?tk=AfOzTLyX8pj",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-6"
+    },
+    {
+      "id": "washer-dryer-set",
+      "name": "洗烘套装",
+      "brand": "小天鹅",
+      "model": "TG12K60Pro + TH12K60",
+      "room": "家政间",
+      "location": "单通高整柜内上下叠放",
+      "quantity": 1,
+      "deviceSize": "595 × 600 × 1704 mm",
+      "cabinetSize": "柜内净宽 625 / 净深 645 / 净高 1719 mm（不含门板）",
+      "sizeNote": "",
+      "keyNotes": [
+        "使用原厂金属叠放支架，柜内不设横隔板",
+        "底部进风、顶部/后背出风，背板大面积镂空",
+        "水电设在侧腔，排水侧排"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备与柜体",
+          "items": [
+            {
+              "label": "门板间隙",
+              "value": "柜门关闭后，门板距机器面板8–10mm。"
+            }
+          ]
+        },
+        {
+          "title": "通风与结构",
+          "items": [
+            {
+              "label": "底部进风",
+              "value": "踢脚线通长做隐藏进风，面积≥100cm²。"
+            },
+            {
+              "label": "顶部/后背出风",
+              "value": "总面积≥100cm²；背板不得整板封死，仅两侧窄条加固"
+            },
+            {
+              "label": "防潮",
+              "value": "板材切面PUR封边；柜底中间挖空，仅留周边框架"
+            }
+          ]
+        },
+        {
+          "title": "接口与检修",
+          "items": [
+            {
+              "label": "进出水",
+              "value": "高度1400–1500mm。"
+            },
+            {
+              "label": "电源",
+              "value": "高度1600mm以上。"
+            },
+            {
+              "label": "排水",
+              "value": "管线不得置于机器正后方。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/xiuhong-dim.webp",
+          "alt": "洗烘套装产品与安装尺寸图",
+          "caption": "本项目目标型号TG12K60Pro+TH12K60尺寸图",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/xiuhong-install-1.webp",
+          "alt": "洗烘套装旧安装事项图1",
+          "caption": "其他型号TG10系列参考；不作为本项目尺寸依据",
+          "kind": "reference",
+          "warning": "不作为本项目尺寸依据"
+        },
+        {
+          "src": "assets/xiuhong-install-2.webp",
+          "alt": "洗烘套装旧安装事项图2",
+          "caption": "其他型号参考；不作为本项目尺寸依据",
+          "kind": "reference",
+          "warning": "不作为本项目尺寸依据"
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.8zpHcNYZi1nHQgD?tk=lK4mTJjihoE",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#d-1"
+    },
+    {
+      "id": "mini-washer-secondary-bath",
+      "name": "小洗衣机",
+      "brand": "小天鹅",
+      "model": "TND30V88ULDE 极地舱Max · 3kg",
+      "room": "次卫",
+      "location": "洗手台下方柜体内",
+      "quantity": 1,
+      "deviceSize": "430 × 470 × 540 mm",
+      "cabinetSize": "宽 ≥460 / 深 ≥530 / 高 ≥560 mm",
+      "sizeNote": "",
+      "keyNotes": [
+        "净空按机身与安装图分别留侧、后、顶缝",
+        "前开门净空≥590mm，柜内不得有凸起",
+        "插座置后上方空腔，排水自流至地漏"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备与柜体",
+          "items": [
+            {
+              "label": "门与散热",
+              "value": "安装图要求左右各≥15mm、后部≥60mm、顶部≥20mm。"
+            }
+          ]
+        },
+        {
+          "title": "支撑与接口",
+          "items": [
+            {
+              "label": "供电",
+              "value": "220V 50Hz，1250W；独立接地三孔插座与漏电保护。"
+            },
+            {
+              "label": "进水",
+              "value": "4分内丝水龙头，设于机器后背上方；离地约80–90cm"
+            },
+            {
+              "label": "排水",
+              "value": "排水口地面高度≤2cm，不抬高悬挂。"
+            },
+            {
+              "label": "安装要求",
+              "value": "页面要求水平落地、调平；拆除运输固定螺栓并装堵盖"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/mini-washer-dim.webp",
+          "alt": "小洗衣机机器尺寸图",
+          "caption": "TND30V88ULDE机身尺寸",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/mini-washer-install.webp",
+          "alt": "小洗衣机安装尺寸图",
+          "caption": "安装净空参考",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/mini-washer-1.webp",
+          "alt": "小型洗衣机安装说明图1",
+          "caption": "安装说明参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/mini-washer-5.webp",
+          "alt": "小型洗衣机安装说明图4",
+          "caption": "安装说明参考",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.ja3gliLk9ZylMgy?tk=aGhVTJBtI7I",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#d-2"
+    },
+    {
+      "id": "mini-washer-laundry",
+      "name": "小洗衣机",
+      "brand": "小天鹅",
+      "model": "TND30V88ULDE 极地舱Max · 3kg",
+      "room": "家政间",
+      "location": "隔板上方",
+      "quantity": 1,
+      "deviceSize": "430 × 470 × 540 mm",
+      "cabinetSize": "宽 ≥460 / 深 ≥530 / 高 ≥560 mm",
+      "sizeNote": "",
+      "keyNotes": [
+        "净空按机身与安装图分别留侧、后、顶缝",
+        "前开门净空≥590mm，柜内不得有凸起",
+        "后部留管线空腔，下排水自流至地漏"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备与柜体",
+          "items": [
+            {
+              "label": "门与散热",
+              "value": "安装图要求左右各≥15mm、后部≥60mm、顶部≥20mm。"
+            }
+          ]
+        },
+        {
+          "title": "支撑与接口",
+          "items": [
+            {
+              "label": "供电",
+              "value": "220V 50Hz，1250W；独立接地三孔插座与漏电保护。"
+            },
+            {
+              "label": "进水",
+              "value": "4分内丝水龙头，设于机器后背上方；离地约80–90cm"
+            },
+            {
+              "label": "排水",
+              "value": "排水口地面高度≤2cm，不抬高悬挂。"
+            },
+            {
+              "label": "安装要求",
+              "value": "页面要求水平落地、调平；拆除运输固定螺栓并装堵盖"
+            }
+          ]
+        },
+        {
+          "title": "家政间位置施工要求",
+          "items": [
+            {
+              "label": "安装方式",
+              "value": "页面要求必须水平落地、使用可调地脚调平；严禁悬空吊装"
+            },
+            {
+              "label": "排水",
+              "value": "排水口贴近地面，排水管放置在地面地漏内，不可抬高管道"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/mini-washer-dim.webp",
+          "alt": "小洗衣机机器尺寸图",
+          "caption": "TND30V88ULDE机身尺寸",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/mini-washer-install.webp",
+          "alt": "小洗衣机安装尺寸图",
+          "caption": "安装净空参考",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/mini-washer-1.webp",
+          "alt": "小型洗衣机安装说明图1",
+          "caption": "安装说明参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/mini-washer-5.webp",
+          "alt": "小型洗衣机安装说明图4",
+          "caption": "安装说明参考",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.ja3gliLk9ZylMgy?tk=aGhVTJBtI7I",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#d-2"
+    },
+    {
+      "id": "robot-vacuum",
+      "name": "扫地机器人",
+      "brand": "石头",
+      "model": "P20 Max 上下水版",
+      "room": "次卫",
+      "location": "次卫干区",
+      "quantity": 1,
+      "deviceSize": "主机 353 × 350 × 79.8–93.6 mm；基站 381 × 475 × 300 mm",
+      "cabinetSize": "基站宽 >400 / 高 >255 / 深 >320（嵌入）或 >500（完全嵌入）mm；前方 >700mm",
+      "sizeNote": "",
+      "keyNotes": [
+        "上下水版预留4分上水、3分排水及10A插座",
+        "基站嵌入深度按柜体方案选，不含前方通行",
+        "基站置于干湿分离环境，电源线长1.5m"
+      ],
+      "detailGroups": [
+        {
+          "title": "接口与环境",
+          "items": [
+            {
+              "label": "排水",
+              "value": "排水三通需自备。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/robot-official-1.webp",
+          "alt": "扫地机器人官方尺寸图1",
+          "caption": "P20 Max上下水版与基站尺寸",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-official-2.webp",
+          "alt": "扫地机器人官方尺寸图2",
+          "caption": "安装尺寸与活动空间参考",
+          "kind": "dimension",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-1.webp",
+          "alt": "扫地机器人安装示意图1",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-2.webp",
+          "alt": "扫地机器人安装示意图2",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-3.webp",
+          "alt": "扫地机器人安装示意图3",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-4.webp",
+          "alt": "扫地机器人安装示意图4",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-5.webp",
+          "alt": "扫地机器人安装示意图5",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-6.webp",
+          "alt": "扫地机器人安装示意图6",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-7.webp",
+          "alt": "扫地机器人安装示意图7",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        },
+        {
+          "src": "assets/robot-8.webp",
+          "alt": "扫地机器人安装示意图8",
+          "caption": "上下水安装参考",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://e.tb.cn/h.j1ihmd21QnNv6Ya?tk=qZwMTG705a1",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#d-3"
+    },
+    {
+      "id": "water-prefilter",
+      "name": "前置过滤器",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "全屋用水",
+      "location": "入户总阀之后",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "全屋用水第一道过滤。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    },
+    {
+      "id": "water-big-bottle",
+      "name": "大白瓶",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "全屋用水",
+      "location": "全屋用水分流起点",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "全屋用水必经的深度过滤。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    },
+    {
+      "id": "water-softener",
+      "name": "中央软水机",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "全屋用水",
+      "location": "软水线",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "供马桶/洗衣机/洗碗机及燃气热水器。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    },
+    {
+      "id": "water-ro",
+      "name": "RO直饮机",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "全屋用水",
+      "location": "直饮水线",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "自带净水龙头，外接餐边柜管线机。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    }
+  ]
+}

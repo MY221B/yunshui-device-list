@@ -323,57 +323,6 @@
       "sourceUrl": "https://admirable-myhome.netlify.app/#k-3"
     },
     {
-      "id": "under-sink-water-heater",
-      "name": "小厨宝",
-      "brand": "飞利浦",
-      "model": "AWH1066 即热式",
-      "room": "厨房",
-      "location": "厨房水槽柜内壁挂",
-      "quantity": 1,
-      "deviceSize": "230 × 55 × 160 mm",
-      "cabinetSize": "左右各 ≥30mm；背部 ≥25mm",
-      "sizeNote": "",
-      "keyNotes": [
-        "固定在实心墙或加固实木板",
-        "5500W独立回路，优先硬线直连漏保",
-        "进出水4分口，柜内注意防潮"
-      ],
-      "detailGroups": [
-        {
-          "title": "电源与水路",
-          "items": [
-            {
-              "label": "电源",
-              "value": "国标4平方铜线；独立C32漏电保护（30mA）。"
-            },
-            {
-              "label": "接线",
-              "value": "若用插座，页面要求≥25A三孔防溅；220V下标称电流约25A。插座位置高于机器；严禁排插转接、细线代用。"
-            },
-            {
-              "label": "接口",
-              "value": "4分螺纹下进下出；取大白瓶过滤后冷水"
-            },
-            {
-              "label": "安装",
-              "value": "先通水试压再通电；不得无水干烧；远离直接溅水处"
-            }
-          ]
-        }
-      ],
-      "images": [
-        {
-          "src": "assets/chubao-install.webp",
-          "alt": "小厨宝安装要求图",
-          "caption": "电路与水路安装要求",
-          "kind": "installation",
-          "warning": ""
-        }
-      ],
-      "productUrl": "https://v.douyin.com/4lT7OoCr2-Q/",
-      "sourceUrl": "https://admirable-myhome.netlify.app/#w-5"
-    },
-    {
       "id": "washer-dryer-set",
       "name": "洗烘套装",
       "brand": "小天鹅",
@@ -462,10 +411,10 @@
     },
     {
       "id": "mini-washer-secondary-bath",
-      "name": "小洗衣机",
+      "name": "小洗衣机·洗手台",
       "brand": "小天鹅",
       "model": "TND30V88ULDE 极地舱Max · 3kg",
-      "room": "次卫",
+      "room": "次卫干区",
       "location": "洗手台下方柜体内",
       "quantity": 1,
       "deviceSize": "430 × 470 × 540 mm",
@@ -543,7 +492,7 @@
     },
     {
       "id": "mini-washer-laundry",
-      "name": "小洗衣机",
+      "name": "小洗衣机·家政间",
       "brand": "小天鹅",
       "model": "TND30V88ULDE 极地舱Max · 3kg",
       "room": "家政间",
@@ -640,8 +589,8 @@
       "name": "扫地机器人",
       "brand": "石头",
       "model": "P20 Max 上下水版",
-      "room": "次卫",
-      "location": "次卫干区",
+      "room": "次卫干区",
+      "location": "洗手台下方柜体内",
       "quantity": 1,
       "deviceSize": "主机 353 × 350 × 79.8–93.6 mm；基站 381 × 475 × 300 mm",
       "cabinetSize": "基站宽 >400 / 高 >255 / 深 >320（嵌入）或 >500（完全嵌入）mm；前方 >700mm",
@@ -888,6 +837,57 @@
       ],
       "productUrl": null,
       "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    },
+    {
+      "id": "under-sink-water-heater",
+      "name": "小厨宝",
+      "brand": "飞利浦",
+      "model": "AWH1066 即热式",
+      "room": "厨房",
+      "location": "厨房水槽柜内壁挂",
+      "quantity": 1,
+      "deviceSize": "230 × 55 × 160 mm",
+      "cabinetSize": "左右各 ≥30mm；背部 ≥25mm",
+      "sizeNote": "",
+      "keyNotes": [
+        "固定在实心墙或加固实木板",
+        "5500W独立回路，优先硬线直连漏保",
+        "进出水4分口，柜内注意防潮"
+      ],
+      "detailGroups": [
+        {
+          "title": "电源与水路",
+          "items": [
+            {
+              "label": "电源",
+              "value": "国标4平方铜线；独立C32漏电保护（30mA）。"
+            },
+            {
+              "label": "接线",
+              "value": "若用插座，页面要求≥25A三孔防溅；220V下标称电流约25A。插座位置高于机器；严禁排插转接、细线代用。"
+            },
+            {
+              "label": "接口",
+              "value": "4分螺纹下进下出；取大白瓶过滤后冷水"
+            },
+            {
+              "label": "安装",
+              "value": "先通水试压再通电；不得无水干烧；远离直接溅水处"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/chubao-install.webp",
+          "alt": "小厨宝安装要求图",
+          "caption": "电路与水路安装要求",
+          "kind": "installation",
+          "warning": ""
+        }
+      ],
+      "productUrl": "https://v.douyin.com/4lT7OoCr2-Q/",
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-5"
     }
   ]
 }

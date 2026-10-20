@@ -80,6 +80,12 @@ h1{font-size:clamp(25px,2.55vw,37px);letter-spacing:-.045em;line-height:1.2;marg
 .image-figure figcaption{font-size:12px;font-weight:700;color:#45574c;margin:0 0 8px}
 .image-frame{display:block;width:100%;margin:0;padding:0;overflow:hidden;background:#f2f4f0;border:1px solid #eef0ec;border-radius:4px;cursor:zoom-in;text-align:left}
 .image-frame img{display:block;width:auto;height:auto;max-width:100%}
+@media(min-width:701px){
+  .image-stack{display:flex;flex-wrap:wrap;align-items:flex-start}
+  .image-figure{width:fit-content;max-width:100%}
+  .image-frame{width:fit-content;max-width:100%}
+  .image-frame img{max-width:min(100%,520px);max-height:380px;object-fit:contain}
+}
 .image-warning{background:#fff4cf;border-left:3px solid #e4aa31;color:#684b11;padding:8px 9px;margin:6px 0 0;font-size:11px;line-height:1.5;font-weight:750}
 .image-dialog{width:min(1100px,96vw);padding:14px 14px 18px}
 .image-dialog img{display:block;width:auto;max-width:100%;max-height:calc(92vh - 72px);margin:0 auto;object-fit:contain}

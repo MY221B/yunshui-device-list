@@ -220,11 +220,17 @@
     imageDialog.showModal();
   }
 
+  const workbookName = '云水观园 2-2-1102 设备清单.xlsx';
+
   async function downloadWorkbook(event) {
     event.preventDefault();
     const href = event.currentTarget.href;
     if (/MicroMessenger/i.test(navigator.userAgent)) {
-      window.location.assign(href);
+      // WeChat previews any URL ending in .xlsx and does not keep a file.
+      // /dl/ has no office extension, so the response is saved as a file.
+      const downloadUrl = new URL('/dl/' + encodeURIComponent('云水观园 2-2-1102 设备清单'), window.location.origin);
+      toast('正在下载表格…');
+      window.location.assign(downloadUrl.href);
       return;
     }
     toast('正在准备表格…');
@@ -235,7 +241,7 @@
       const url = URL.createObjectURL(blob);
       const anchor = document.createElement('a');
       anchor.href = url;
-      anchor.download = '云水观园设备尺寸清单.xlsx';
+      anchor.download = workbookName;
       document.body.appendChild(anchor);
       anchor.click();
       anchor.remove();

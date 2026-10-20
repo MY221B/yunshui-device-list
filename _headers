@@ -1,0 +1,10 @@
+/dl/*
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="云水观园 2-2-1102 设备清单.xlsx"; filename*=UTF-8''%E4%BA%91%E6%B0%B4%E8%A7%82%E5%9B%AD%202-2-1102%20%E8%AE%BE%E5%A4%87%E6%B8%85%E5%8D%95.xlsx
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=0, must-revalidate
+
+/exports/*
+  Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  Content-Disposition: attachment; filename="云水观园 2-2-1102 设备清单.xlsx"; filename*=UTF-8''%E4%BA%91%E6%B0%B4%E8%A7%82%E5%9B%AD%202-2-1102%20%E8%AE%BE%E5%A4%87%E6%B8%85%E5%8D%95.xlsx
+  Cache-Control: public, max-age=0, must-revalidate

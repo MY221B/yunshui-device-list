@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#202a27;background:#f5f4f0;font-synthesis:none;line-height:1.5}
 *{box-sizing:border-box}
 body{margin:0}
@@ -109,19 +110,25 @@ dialog::backdrop{background:#16231ab8}
 .sheet[data-view="card"]{background:transparent;border:0;overflow:visible}
 .sheet[data-view="card"] .table-head{display:none}
 .sheet[data-view="card"] #records{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
-.sheet[data-view="card"] .record{border:1px solid #cbd3cc;border-radius:7px;background:#fff;overflow:hidden}
-.sheet[data-view="card"] .record-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px 16px;padding:17px 17px 8px;min-height:0;align-items:start}
-.sheet[data-view="card"] .location,.sheet[data-view="card"] .cabinet-size,.sheet[data-view="card"] .notes-preview{display:block}
-.sheet[data-view="card"] .device-cell{grid-column:1/-1}
-.sheet[data-view="card"] .location{grid-column:1/-1}
-.sheet[data-view="card"] .notes-preview{grid-column:1/-1}
+.sheet[data-view="card"] .record{display:flex;flex-direction:column;border:1px solid #cbd3cc;border-radius:7px;background:#fff;overflow:hidden}
+.sheet[data-view="card"] .record-main{order:1;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"ordinal location" "identity identity" "device-size cabinet-size" "notes notes";gap:11px 16px;padding:17px 17px 8px;min-height:0;align-items:start}
+.sheet[data-view="card"] .record-foot{order:2;display:flex;background:#fff;padding:0 14px 12px}
+.sheet[data-view="card"] .record-detail{order:3;background:#f9faf7}
+.sheet[data-view="card"] .device-cell{display:contents}
+.sheet[data-view="card"] .ordinal{grid-area:ordinal;align-self:center;line-height:1.4}
+.sheet[data-view="card"] .location{grid-area:location;display:block;justify-self:end;align-self:center;text-align:right}
+.sheet[data-view="card"] .device-identity{grid-area:identity;display:block}
+.sheet[data-view="card"] .device-name,.sheet[data-view="card"] .model-line{display:inline}
+.sheet[data-view="card"] .model-line{margin:0 0 0 8px}
+.sheet[data-view="card"] .device-size{grid-area:device-size}
+.sheet[data-view="card"] .cabinet-size{grid-area:cabinet-size;display:block}
+.sheet[data-view="card"] .notes-preview{grid-area:notes;display:flex;flex-wrap:wrap;gap:4px 14px}
+.sheet[data-view="card"] .notes-preview span{box-sizing:border-box;flex:1 1 calc(50% - 7px);max-width:calc(50% - 7px);min-width:0}
 .sheet[data-view="card"] .detail-cue{display:none}
 .sheet[data-view="card"] .folded-facts{display:none}
-.sheet[data-view="card"] .record-foot{display:flex;background:#fff;padding:0 14px 12px}
-.sheet[data-view="card"] .record-detail{background:#f9faf7}
 .sheet[data-view="card"] .size-cell::before{display:block;color:#76837a;font-size:10px;font-weight:600;margin-bottom:2px}
 .sheet[data-view="card"] .device-size::before{content:"机身尺寸"}
 .sheet[data-view="card"] .cabinet-size::before{content:"柜体预留"}
-@media(max-width:979px){.page-shell{padding:19px 20px 38px}.sheet[data-view="card"] .record-main{gap:10px 15px;padding:14px 14px 6px}.sheet[data-view="card"] .device-cell{grid-column:1}.sheet[data-view="card"] .location{grid-column:2;text-align:right;align-self:start;font-size:11px}.sheet[data-view="card"] .device-size{grid-column:1}.sheet[data-view="card"] .cabinet-size{grid-column:2}.sheet[data-view="card"] .notes-preview{grid-column:1/-1;display:flex;gap:5px 15px;flex-wrap:wrap}}
+@media(max-width:979px){.page-shell{padding:19px 20px 38px}.sheet[data-view="card"] .record-main{gap:10px 15px;padding:14px 14px 6px}.sheet[data-view="card"] .location{font-size:11px}}
 @media(max-width:700px){.page-shell{padding:16px 13px 30px}.page-header{padding-bottom:12px}.eyebrow{margin-bottom:8px;font-size:10px;letter-spacing:.06em}.heading-line{align-items:start;flex-direction:column;gap:11px}h1{font-size:27px}.action-row{width:100%}.action-row .action{flex:1}.list-tools{padding:9px 0}.count-line{gap:6px}.search-box{width:min(148px,38vw)}.sheet[data-view="card"] #records{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.sheet[data-view="list"] .table-head,.sheet[data-view="list"] .record-main{gap:8px;padding-left:12px;padding-right:12px}}
 @media(max-width:390px){h1{font-size:24px}.record-main{gap:9px 7px}.model-line{font-size:10px}.size-cell{font-size:11px}.notes-preview{font-size:10px}.filter-panel summary{padding:0 8px}.view-switch button{padding:0 7px;min-width:44px}.list-tool-actions{gap:5px}}

@@ -7,7 +7,7 @@
       "id": "dishwasher",
       "name": "洗碗机",
       "brand": "美的",
-      "model": "小西梅 P80 · 22套顶配洗涤版",
+      "model": "小西梅 P80 · 22套洗涤版",
       "room": "厨房",
       "location": "厨下嵌入",
       "quantity": 1,
@@ -374,76 +374,6 @@
       "sourceUrl": "https://admirable-myhome.netlify.app/#w-5"
     },
     {
-      "id": "water-dispenser",
-      "name": "管线机",
-      "brand": "凯度",
-      "model": "G1Air / GXWH12-G1Air",
-      "room": "餐边柜",
-      "location": "餐边柜壁挂",
-      "quantity": 1,
-      "deviceSize": "320 × 150 × 430 mm",
-      "cabinetSize": "机顶净空 ≥50mm；壁挂孔位按安装图预留",
-      "sizeNote": "",
-      "keyNotes": [
-        "壁挂孔位需在柜体/墙面施工前预留",
-        "使用16A独立插座，勿用10A转接头",
-        "净水管及52mm厚插头通道提前留位"
-      ],
-      "detailGroups": [
-        {
-          "title": "设备与安装",
-          "items": [
-            {
-              "label": "安装基层",
-              "value": "岩板/瓷板需提前预留壁挂孔位"
-            }
-          ]
-        },
-        {
-          "title": "接口与电源",
-          "items": [
-            {
-              "label": "电源",
-              "value": "额定功率3250W；电源线长1.4m。"
-            },
-            {
-              "label": "净水管",
-              "value": "二选一接厨下净水器或桶装水。净水器标配3分PE管2m，建议5m内、最长10m；桶装水2分PE管1m+硅胶管0.5m，总长不超1.5m。水管水电阶段预埋。"
-            },
-            {
-              "label": "穿管与检修",
-              "value": "预留63管（穿线管）供插头穿过。"
-            }
-          ]
-        }
-      ],
-      "images": [
-        {
-          "src": "assets/guanxianji-1.webp",
-          "alt": "管线机官方图1",
-          "caption": "型号与设备尺寸参考",
-          "kind": "dimension",
-          "warning": ""
-        },
-        {
-          "src": "assets/guanxianji-2.webp",
-          "alt": "管线机官方图2",
-          "caption": "安装尺寸及接口参考",
-          "kind": "dimension",
-          "warning": ""
-        },
-        {
-          "src": "assets/guanxianji-notes.webp",
-          "alt": "管线机安装注意事项",
-          "caption": "安装与接口注意事项",
-          "kind": "installation",
-          "warning": ""
-        }
-      ],
-      "productUrl": "https://e.tb.cn/h.8BLNy7IEPcMQjY2?tk=AfOzTLyX8pj",
-      "sourceUrl": "https://admirable-myhome.netlify.app/#w-6"
-    },
-    {
       "id": "washer-dryer-set",
       "name": "洗烘套装",
       "brand": "小天鹅",
@@ -806,6 +736,158 @@
       ],
       "productUrl": "https://e.tb.cn/h.j1ihmd21QnNv6Ya?tk=qZwMTG705a1",
       "sourceUrl": "https://admirable-myhome.netlify.app/#d-3"
+    },
+    {
+      "id": "water-prefilter",
+      "name": "前置过滤器",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "厨房",
+      "location": "水池下方",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "全屋用水第一道过滤。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    },
+    {
+      "id": "water-big-bottle",
+      "name": "大白瓶",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "厨房",
+      "location": "水池下方",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "全屋用水必经的深度过滤。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    },
+    {
+      "id": "water-softener",
+      "name": "中央软水机",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "厨房",
+      "location": "右侧柜子内",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "供马桶/洗衣机/洗碗机及燃气热水器。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
+    },
+    {
+      "id": "water-ro",
+      "name": "RO直饮机",
+      "brand": "滨特尔",
+      "model": "具体型号由品牌方提供",
+      "room": "厨房",
+      "location": "水池上",
+      "quantity": 1,
+      "deviceSize": "品牌方提供",
+      "cabinetSize": "由品牌方与施工方对接",
+      "sizeNote": "",
+      "keyNotes": [
+        "具体尺寸及安装注意由品牌方专人与施工方对接",
+        "品牌方与施工方已拉群对接"
+      ],
+      "detailGroups": [
+        {
+          "title": "设备功能",
+          "items": [
+            {
+              "label": "用途",
+              "value": "自带净水龙头，外接餐边柜管线机。"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/water-flow.webp",
+          "alt": "全屋用水方案流程图",
+          "caption": "全屋水路总览；非单机参数图",
+          "kind": "reference",
+          "warning": ""
+        }
+      ],
+      "productUrl": null,
+      "sourceUrl": "https://admirable-myhome.netlify.app/#w-3"
     }
   ]
 }

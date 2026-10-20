@@ -282,11 +282,6 @@
     render();
   });
   searchNode.addEventListener('input', render);
-  $('#filter-toggle').addEventListener('click', () => {
-    const open = $('#filter-toggle').getAttribute('aria-expanded') !== 'true';
-    $('#filter-toggle').setAttribute('aria-expanded', String(open));
-    $('#filter-panel').hidden = !open;
-  });
   $('.view-switch').addEventListener('click', (event) => {
     const button = event.target.closest('[data-view]');
     if (!button) return;
